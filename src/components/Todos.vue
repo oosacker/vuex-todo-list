@@ -2,7 +2,11 @@
     <div>
       <h3>TODO LIST</h3>
       <div class="todos">
-        <div v-for="todo in allTodos" :key="todo.id" class="todo">
+        <div 
+          v-for="todo in allTodos" 
+          :key="todo.id" 
+          class="todo"
+        >
           {{ todo.title }}
         </div>
       </div>
@@ -14,11 +18,7 @@ import { mapGetters } from 'vuex'
 
 export default {
   name: "Todos",
-  computed: mapGetters(
-    [
-      'allTodos'
-    ]
-  )
+  computed: mapGetters(["allTodos"]),
 }
 </script>
 
